@@ -6,7 +6,6 @@ import com.example.demo.service.ClassRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class ClassRoomImpl implements ClassRoomService {
     @Autowired
@@ -33,4 +32,5 @@ public class ClassRoomImpl implements ClassRoomService {
         classRepository.deleteById(id);
 
     }
+
 }

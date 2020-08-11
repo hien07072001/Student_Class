@@ -36,10 +36,10 @@ public class StudentController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @PutMapping("/student/update")
-    public ResponseEntity<Student> updateObjective(@RequestBody Student student){
-        studentService.save(student);
-        return new ResponseEntity<>(HttpStatus.OK);
+    @GetMapping("/student/getById/{id}")
+    public ResponseEntity<Student> finById(@PathVariable Long id){
+        Student data=  studentService.findById(id);
+        return new ResponseEntity<>(data,HttpStatus.OK);
     }
 
 }

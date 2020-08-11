@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -71,6 +73,7 @@ public class ClassRoom  {
         this.hours = hours;
     }
 
+    @JsonProperty(value = "note")
     public String getNote() {
         return note;
     }
